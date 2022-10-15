@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+spec:
+  containers:
+  - name: hello-world
+    image: <CONTAINER_REGISTRY_URI>/hello-world:1
+    ports:
+    - containerPort: 8080
+  imagePullSecrets:
+  - name: ecr
